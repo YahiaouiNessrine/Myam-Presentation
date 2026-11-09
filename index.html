@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="dark" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYAM — Solution Numérique pour la Restauration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="myam_logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Particle Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="myam_logo.png" alt="MYAM Logo" class="logo-img">
+        <span class="logo-text">MY<span class="logo-accent">AM</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+        <a href="#features" class="nav-link" data-fr="Fonctionnalités" data-ar="المزايا">Fonctionnalités</a>
+        <a href="#pricing" class="nav-link" data-fr="Tarifs" data-ar="الأسعار">Tarifs</a>
+        <a href="#partnership" class="nav-link" data-fr="Partenariat" data-ar="الشراكة">Partenariat</a>
+        <a href="#commissions" class="nav-link" data-fr="Commissions" data-ar="العمولات">Commissions</a>
+        <a href="#contact" class="nav-link" data-fr="Contact" data-ar="اتصل بنا">Contact</a>
+      </div>
+
+      <!-- Theme & Language Toggles -->
+      <div class="nav-controls">
+        <button class="control-btn theme-toggle" id="themeToggle" aria-label="Mode clair/sombre" title="Mode clair/sombre">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="control-btn lang-toggle" id="langToggle" aria-label="Langue" title="العربية / Français">
+          <span class="lang-label" data-fr="عربية" data-ar="FR">عربية</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-on-scroll">
+        <span class="badge-dot"></span>
+        <span data-fr="Solution #1 pour la restauration en Algérie" data-ar="الحل الأول للمطاعم في الجزائر">Solution #1 pour la restauration en Algérie</span>
+      </div>
+      <h1 class="hero-title animate-on-scroll">
+        <span class="title-line" data-fr="Développez votre" data-ar="طوّروا">Développez votre</span>
+        <span class="title-line gradient-text" data-fr="présence numérique" data-ar="حضوركم الرقمي">présence numérique</span>
+        <span class="title-line">
+          <span data-fr="simplifiez votre" data-ar="بسّطوا">simplifiez votre</span> <span class="gradient-text-alt" data-fr="gestion" data-ar="إدارتكم">gestion</span>
+        </span>
+      </h1>
+      <p class="hero-subtitle animate-on-scroll" data-fr="MYAM accompagne les restaurateurs dans leur transformation numérique avec des outils modernes, accessibles et centralisés. Menus digitaux, gestion des commandes et bien plus." data-ar="MYAM ترافق أصحاب المطاعم في تحولهم الرقمي بأدوات حديثة وسهلة ومركزية. قوائم رقمية، إدارة الطلبات والمزيد.">
+        MYAM accompagne les restaurateurs dans leur transformation numérique avec des outils modernes, accessibles et centralisés. Menus digitaux, gestion des commandes et bien plus.
+      </p>
+      <div class="hero-cta animate-on-scroll">
+        <a href="#features" class="btn btn-primary">
+          <span data-fr="Découvrir MYAM" data-ar="اكتشف MYAM">Découvrir MYAM</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#partnership" class="btn btn-secondary">
+          <span data-fr="Devenir Partenaire" data-ar="كن شريكاً">Devenir Partenaire</span>
+        </a>
+      </div>
+      <div class="hero-stats animate-on-scroll">
+        <div class="stat-item">
+          <span class="stat-number" data-count="35000">0</span><span class="stat-suffix"> <span data-fr="DA/an" data-ar="دج/سنة">DA/an</span></span>
+          <span class="stat-label" data-fr="À partir de" data-ar="ابتداءً من">À partir de</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="25">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label" data-fr="Commission max" data-ar="عمولة قصوى">Commission max</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label" data-fr="Inclus" data-ar="مشمول">Inclus</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D Floating Device Mockup -->
+    <div class="hero-visual animate-on-scroll">
+      <div class="device-scene">
+        <div class="device-3d">
+          <div class="device-screen">
+            <div class="screen-content">
+              <div class="screen-header">
+                <div class="screen-dot red"></div>
+                <div class="screen-dot yellow"></div>
+                <div class="screen-dot green"></div>
+              </div>
+              <div class="screen-app">
+                <div class="app-nav">
+                  <span class="app-logo"><img src="myam_logo.png" alt="MYAM" class="app-logo-img"> MYAM</span>
+                  <div class="app-menu-icon">☰</div>
+                </div>
+                <div class="app-hero-img">
+                  <div class="app-hero-overlay">
+                    <h3>Restaurant Le Gourmet</h3>
+                    <p>⭐ 4.8 · Fast Food</p>
+                  </div>
+                </div>
+                <div class="app-categories">
+                  <div class="app-cat active">🍔 Burgers</div>
+                  <div class="app-cat">🌮 Tacos</div>
+                  <div class="app-cat">🍕 Pizzas</div>
+                </div>
+                <div class="app-menu-items">
+                  <div class="app-item">
+                    <div class="app-item-info">
+                      <div class="app-item-name">Burger Classic</div>
+                      <div class="app-item-desc">Steak, cheddar, salade, tomate</div>
+                      <div class="app-item-price">650 DA</div>
+                    </div>
+                    <div class="app-item-img">🍔</div>
+                  </div>
+                  <div class="app-item">
+                    <div class="app-item-info">
+                      <div class="app-item-name">Tacos Viande</div>
+                      <div class="app-item-desc">Viande hachée, frites, sauce fromagère</div>
+                      <div class="app-item-price">550 DA</div>
+                    </div>
+                    <div class="app-item-img">🌮</div>
+                  </div>
+                  <div class="app-item">
+                    <div class="app-item-info">
+                      <div class="app-item-name">Pizza Margherita</div>
+                      <div class="app-item-desc">Mozzarella, tomate, basilic</div>
+                      <div class="app-item-price">900 DA</div>
+                    </div>
+                    <div class="app-item-img">🍕</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3D depth sides -->
+          <div class="device-side device-right"></div>
+          <div class="device-side device-bottom"></div>
+        </div>
+        <!-- Floating elements around device -->
+        <div class="float-element float-1">
+          <div class="float-card">
+            <span class="float-icon">📊</span>
+            <span class="float-text" data-fr="+45 commandes" data-ar="+45 طلب">+45 commandes</span>
+          </div>
+        </div>
+        <div class="float-element float-2">
+          <div class="float-card">
+            <span class="float-icon">⭐</span>
+            <span class="float-text" data-fr="4.9 Note" data-ar="4.9 تقييم">4.9 Note</span>
+          </div>
+        </div>
+        <div class="float-element float-3">
+          <div class="float-card">
+            <span class="float-icon">📈</span>
+            <span class="float-text" data-fr="+120% visites" data-ar="+120% زيارات">+120% visites</span>
+          </div>
+        </div>
+        <div class="float-element float-4">
+          <div class="float-card notification">
+            <span class="float-icon">🔔</span>
+            <span class="float-text" data-fr="Nouvelle commande !" data-ar="طلب جديد!">Nouvelle commande !</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="mouse-wheel"></div>
+      </div>
+      <span data-fr="Découvrir" data-ar="اكتشف">Découvrir</span>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES SECTION ==================== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag" data-fr="Fonctionnalités" data-ar="المزايا">Fonctionnalités</span>
+        <h2 class="section-title">
+          <span data-fr="Tout ce dont votre restaurant a" data-ar="كل ما يحتاجه مطعمكم من">Tout ce dont votre restaurant a</span> <span class="gradient-text" data-fr="besoin" data-ar="أدوات">besoin</span>
+        </h2>
+        <p class="section-desc" data-fr="Des outils puissants pour transformer votre restaurant et conquérir le numérique." data-ar="أدوات قوية لتحويل مطعمكم ودخول العالم الرقمي.">Des outils puissants pour transformer votre restaurant et conquérir le numérique.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🌐</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Présence Numérique" data-ar="الحضور الرقمي">Présence Numérique</h3>
+          <p class="feature-desc" data-fr="Une vitrine en ligne dédiée à chaque restaurant, accessible 24h/24 pour attirer de nouveaux clients." data-ar="واجهة رقمية خاصة بكل مطعم، متاحة على مدار الساعة لجذب زبائن جدد.">Une vitrine en ligne dédiée à chaque restaurant, accessible 24h/24 pour attirer de nouveaux clients.</p>
+          <div class="feature-number">01</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">📱</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Menu Digital" data-ar="القائمة الرقمية">Menu Digital</h3>
+          <p class="feature-desc" data-fr="Présentez vos catégories, plats, descriptions et prix de manière élégante et interactive." data-ar="اعرضوا أصنافكم وأطباقكم وأوصافها وأسعارها بطريقة أنيقة وتفاعلية.">Présentez vos catégories, plats, descriptions et prix de manière élégante et interactive.</p>
+          <div class="feature-number">02</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">✏️</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Gestion des Menus" data-ar="إدارة القوائم">Gestion des Menus</h3>
+          <p class="feature-desc" data-fr="Ajoutez, modifiez ou supprimez vos plats et mettez à jour vos informations en temps réel." data-ar="أضيفوا أو عدّلوا أو احذفوا أطباقكم وحدّثوا معلوماتكم في الوقت الحقيقي.">Ajoutez, modifiez ou supprimez vos plats et mettez à jour vos informations en temps réel.</p>
+          <div class="feature-number">03</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">📦</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Gestion des Commandes" data-ar="إدارة الطلبات">Gestion des Commandes</h3>
+          <p class="feature-desc" data-fr="Recevez, consultez et suivez les commandes de vos clients depuis un tableau de bord centralisé." data-ar="استقبلوا واستعرضوا وتابعوا طلبات زبائنكم من لوحة تحكم مركزية.">Recevez, consultez et suivez les commandes de vos clients depuis un tableau de bord centralisé.</p>
+          <div class="feature-number">04</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🏷️</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Promotions" data-ar="العروض الترويجية">Promotions</h3>
+          <p class="feature-desc" data-fr="Mettez en avant vos offres spéciales et promotions pour fidéliser et attirer les clients." data-ar="أبرزوا عروضكم الخاصة لكسب ولاء الزبائن وجذب المزيد.">Mettez en avant vos offres spéciales et promotions pour fidéliser et attirer les clients.</p>
+          <div class="feature-number">05</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">📍</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Localisation" data-ar="تحديد الموقع">Localisation</h3>
+          <p class="feature-desc" data-fr="Permettez à vos clients de vous découvrir facilement grâce à la géolocalisation." data-ar="مكّنوا زبائنكم من اكتشافكم بسهولة عبر تحديد الموقع الجغرافي.">Permettez à vos clients de vous découvrir facilement grâce à la géolocalisation.</p>
+          <div class="feature-number">06</div>
+        </div>
+
+        <div class="feature-card featured animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">⚙️</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title">MYAM Manager</h3>
+          <p class="feature-desc" data-fr="Un espace de gestion complet pour piloter l'ensemble de l'activité de votre établissement." data-ar="مساحة إدارة شاملة لتسيير كامل نشاط مؤسستكم.">Un espace de gestion complet pour piloter l'ensemble de l'activité de votre établissement.</p>
+          <div class="feature-badge" data-fr="Nouveau" data-ar="جديد">Nouveau</div>
+          <div class="feature-number">07</div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-tilt>
+          <div class="feature-icon-wrap">
+            <div class="feature-icon">🏢</div>
+            <div class="feature-glow"></div>
+          </div>
+          <h3 class="feature-title" data-fr="Multi-établissements" data-ar="متعدد الفروع">Multi-établissements</h3>
+          <p class="feature-desc" data-fr="Gérez plusieurs restaurants ou points de vente d'une même enseigne depuis un seul compte." data-ar="أديروا عدة مطاعم أو نقاط بيع لنفس العلامة التجارية من حساب واحد.">Gérez plusieurs restaurants ou points de vente d'une même enseigne depuis un seul compte.</p>
+          <div class="feature-number">08</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING SECTION ==================== -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag" data-fr="Tarification" data-ar="التسعير">Tarification</span>
+        <h2 class="section-title">
+          <span data-fr="Des tarifs" data-ar="أسعار">Des tarifs</span> <span class="gradient-text" data-fr="simples et transparents" data-ar="بسيطة وشفافة">simples et transparents</span>
+        </h2>
+        <p class="section-desc" data-fr="Un abonnement annuel tout inclus, sans frais cachés." data-ar="اشتراك سنوي شامل، بدون رسوم مخفية.">Un abonnement annuel tout inclus, sans frais cachés.</p>
+      </div>
+
+      <div class="pricing-cards">
+        <div class="pricing-card main animate-on-scroll" data-tilt>
+          <div class="pricing-popular" data-fr="Le plus populaire" data-ar="الأكثر شعبية">Le plus populaire</div>
+          <div class="pricing-header">
+            <h3 data-fr="Premier Établissement" data-ar="الفرع الأول">Premier Établissement</h3>
+            <div class="pricing-amount" dir="ltr">
+              <span class="pricing-value">35 000</span>
+              <span class="pricing-currency" data-fr="DA" data-ar="دج">DA</span>
+              <span class="pricing-period" data-fr="/an" data-ar="/سنة">/an</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <span data-fr="Présence numérique complète" data-ar="حضور رقمي كامل">Présence numérique complète</span></li>
+            <li><span class="check">✓</span> <span data-fr="Menu digital interactif" data-ar="قائمة رقمية تفاعلية">Menu digital interactif</span></li>
+            <li><span class="check">✓</span> <span data-fr="Gestion des commandes" data-ar="إدارة الطلبات">Gestion des commandes</span></li>
+            <li><span class="check">✓</span> MYAM Manager</li>
+            <li><span class="check">✓</span> <span data-fr="Promotions & offres spéciales" data-ar="عروض ترويجية وخاصة">Promotions & offres spéciales</span></li>
+            <li><span class="check">✓</span> <span data-fr="Géolocalisation" data-ar="تحديد الموقع">Géolocalisation</span></li>
+            <li><span class="check">✓</span> <span data-fr="Configuration initiale incluse" data-ar="الإعداد الأولي مشمول">Configuration initiale incluse</span></li>
+            <li><span class="check">✓</span> <span data-fr="Assistance technique" data-ar="الدعم الفني">Assistance technique</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full" data-fr="Souscrire maintenant" data-ar="اشترك الآن">Souscrire maintenant</a>
+        </div>
+
+        <div class="pricing-card secondary animate-on-scroll" data-tilt>
+          <div class="pricing-header">
+            <h3 data-fr="Établissement Supplémentaire" data-ar="فرع إضافي">Établissement Supplémentaire</h3>
+            <div class="pricing-amount" dir="ltr">
+              <span class="pricing-value">5 000</span>
+              <span class="pricing-currency" data-fr="DA" data-ar="دج">DA</span>
+              <span class="pricing-period" data-fr="/an" data-ar="/سنة">/an</span>
+            </div>
+            <p class="pricing-note" data-fr="Même enseigne uniquement" data-ar="نفس العلامة التجارية فقط">Même enseigne uniquement</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <span data-fr="Toutes les fonctionnalités incluses" data-ar="جميع المزايا مشمولة">Toutes les fonctionnalités incluses</span></li>
+            <li><span class="check">✓</span> <span data-fr="Gestion centralisée" data-ar="إدارة مركزية">Gestion centralisée</span></li>
+            <li><span class="check">✓</span> <span data-fr="Configuration dédiée" data-ar="إعداد خاص">Configuration dédiée</span></li>
+            <li><span class="check">✓</span> <span data-fr="Support technique inclus" data-ar="الدعم الفني مشمول">Support technique inclus</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-full" data-fr="Ajouter un établissement" data-ar="أضف فرعاً">Ajouter un établissement</a>
+        </div>
+      </div>
+
+      <!-- Interactive pricing calculator -->
+      <div class="pricing-calculator animate-on-scroll">
+        <div class="calc-header">
+          <h3>💡 <span data-fr="Calculez votre abonnement" data-ar="احسب اشتراكك">Calculez votre abonnement</span></h3>
+          <p data-fr="Combien d'établissements souhaitez-vous inscrire sous la même enseigne ?" data-ar="كم عدد الفروع التي ترغبون في تسجيلها تحت نفس العلامة؟">Combien d'établissements souhaitez-vous inscrire sous la même enseigne ?</p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-slider-wrap">
+            <input type="range" min="1" max="10" value="1" class="calc-slider" id="estabSlider">
+            <div class="calc-slider-labels">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            </div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-breakdown" id="calcBreakdown">
+              <div class="calc-line">
+                <span data-fr="1er établissement" data-ar="الفرع الأول">1er établissement</span>
+                <span>35 000 DA</span>
+              </div>
+            </div>
+            <div class="calc-total">
+              <span data-fr="Total annuel" data-ar="المجموع السنوي">Total annuel</span>
+              <span class="calc-total-amount" id="calcTotal">35 000 DA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PARTNERSHIP SECTION ==================== -->
+  <section class="section partnership" id="partnership">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag" data-fr="Partenariat Commercial" data-ar="الشراكة التجارية">Partenariat Commercial</span>
+        <h2 class="section-title">
+          <span data-fr="Devenez partenaire" data-ar="كن شريك">Devenez partenaire</span> <span class="gradient-text">MYAM</span>
+        </h2>
+        <p class="section-desc" data-fr="Rejoignez notre réseau de commerciaux indépendants et bénéficiez d'une rémunération attractive basée sur vos résultats." data-ar="انضموا إلى شبكة ممثلينا التجاريين المستقلين واستفيدوا من مكافأة جذابة مبنية على نتائجكم.">Rejoignez notre réseau de commerciaux indépendants et bénéficiez d'une rémunération attractive basée sur vos résultats.</p>
+      </div>
+
+      <div class="partnership-intro animate-on-scroll">
+        <div class="partnership-info">
+          <h3 data-fr="Un partenariat gagnant-gagnant" data-ar="شراكة رابح-رابح">Un partenariat gagnant-gagnant</h3>
+          <p data-fr="Dans le cadre du développement de MYAM en Algérie, nous recherchons des partenaires commerciaux indépendants souhaitant participer à la commercialisation de notre solution auprès des restaurants." data-ar="في إطار تطوير MYAM في الجزائر، نبحث عن شركاء تجاريين مستقلين يرغبون في المشاركة في تسويق حلّنا لدى المطاعم.">Dans le cadre du développement de MYAM en Algérie, nous recherchons des partenaires commerciaux indépendants souhaitant participer à la commercialisation de notre solution auprès des restaurants.</p>
+          <p data-fr="Le partenariat repose sur un système de <strong>rémunération à la commission</strong>, sans salaire fixe. Vous êtes rémunéré en fonction des nouveaux abonnements que vous concluez." data-ar="تعتمد الشراكة على نظام <strong>أجر بالعمولة</strong>، بدون راتب ثابت. تتقاضون حسب الاشتراكات الجديدة التي تحققونها.">Le partenariat repose sur un système de <strong>rémunération à la commission</strong>, sans salaire fixe. Vous êtes rémunéré en fonction des nouveaux abonnements que vous concluez.</p>
+          <div class="partnership-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">💰</span>
+              <div>
+                <strong data-fr="Commission progressive" data-ar="عمولة تصاعدية">Commission progressive</strong>
+                <span data-fr="De 20% à 25%" data-ar="من 20% إلى 25%">De 20% à 25%</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🕐</span>
+              <div>
+                <strong data-fr="Flexibilité totale" data-ar="مرونة تامة">Flexibilité totale</strong>
+                <span data-fr="Organisez votre temps" data-ar="نظّم وقتك">Organisez votre temps</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🚀</span>
+              <div>
+                <strong data-fr="Outils fournis" data-ar="أدوات مقدمة">Outils fournis</strong>
+                <span data-fr="Supports & formation" data-ar="دعائم وتكوين">Supports & formation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Missions with timeline -->
+      <div class="missions-section animate-on-scroll">
+        <h3 class="missions-title" data-fr="Vos missions en tant que partenaire" data-ar="مهامكم كشريك تجاري">Vos missions en tant que partenaire</h3>
+        <div class="missions-timeline">
+          <div class="mission-item" data-step="1">
+            <div class="mission-icon">🔍</div>
+            <div class="mission-content">
+              <h4 data-fr="Prospecter" data-ar="التنقيب">Prospecter</h4>
+              <p data-fr="Identifier et prospecter les restaurants susceptibles d'être intéressés par MYAM." data-ar="تحديد والتنقيب عن المطاعم التي قد تهتم بـ MYAM.">Identifier et prospecter les restaurants susceptibles d'être intéressés par MYAM.</p>
+            </div>
+          </div>
+          <div class="mission-item" data-step="2">
+            <div class="mission-icon">🎤</div>
+            <div class="mission-content">
+              <h4 data-fr="Présenter" data-ar="التقديم">Présenter</h4>
+              <p data-fr="Présenter la plateforme et expliquer ses avantages aux restaurateurs." data-ar="تقديم المنصة وشرح مزاياها لأصحاب المطاعم.">Présenter la plateforme et expliquer ses avantages aux restaurateurs.</p>
+            </div>
+          </div>
+          <div class="mission-item" data-step="3">
+            <div class="mission-icon">💻</div>
+            <div class="mission-content">
+              <h4 data-fr="Démontrer" data-ar="العرض التوضيحي">Démontrer</h4>
+              <p data-fr="Organiser des démonstrations de la solution MYAM." data-ar="تنظيم عروض توضيحية لحلّ MYAM.">Organiser des démonstrations de la solution MYAM.</p>
+            </div>
+          </div>
+          <div class="mission-item" data-step="4">
+            <div class="mission-icon">💬</div>
+            <div class="mission-content">
+              <h4 data-fr="Répondre" data-ar="الإجابة">Répondre</h4>
+              <p data-fr="Répondre aux premières questions commerciales des prospects." data-ar="الإجابة على الأسئلة التجارية الأولى للعملاء المحتملين.">Répondre aux premières questions commerciales des prospects.</p>
+            </div>
+          </div>
+          <div class="mission-item" data-step="5">
+            <div class="mission-icon">🤝</div>
+            <div class="mission-content">
+              <h4 data-fr="Accompagner" data-ar="المرافقة">Accompagner</h4>
+              <p data-fr="Accompagner les restaurateurs intéressés jusqu'à la souscription." data-ar="مرافقة أصحاب المطاعم المهتمين حتى الاشتراك.">Accompagner les restaurateurs intéressés jusqu'à la souscription.</p>
+            </div>
+          </div>
+          <div class="mission-item" data-step="6">
+            <div class="mission-icon">📋</div>
+            <div class="mission-content">
+              <h4 data-fr="Suivre" data-ar="المتابعة">Suivre</h4>
+              <p data-fr="Assurer le suivi commercial et transmettre les informations à l'équipe MYAM." data-ar="ضمان المتابعة التجارية ونقل المعلومات لفريق MYAM.">Assurer le suivi commercial et transmettre les informations à l'équipe MYAM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avantages -->
+      <div class="advantages-grid animate-on-scroll">
+        <h3 class="advantages-title" data-fr="Les avantages du partenariat" data-ar="مزايا الشراكة">Les avantages du partenariat</h3>
+        <div class="adv-cards">
+          <div class="adv-card" data-tilt>
+            <div class="adv-icon">🆓</div>
+            <h4 data-fr="Indépendance" data-ar="الاستقلالية">Indépendance</h4>
+            <p data-fr="Collaboration indépendante, organisez librement votre activité." data-ar="تعاون مستقل، نظّم نشاطك بحرية.">Collaboration indépendante, organisez librement votre activité.</p>
+          </div>
+          <div class="adv-card" data-tilt>
+            <div class="adv-icon">📈</div>
+            <h4 data-fr="Revenus croissants" data-ar="دخل متزايد">Revenus croissants</h4>
+            <p data-fr="Commissions progressives pouvant atteindre 25%." data-ar="عمولات تصاعدية تصل إلى 25%.">Commissions progressives pouvant atteindre 25%.</p>
+          </div>
+          <div class="adv-card" data-tilt>
+            <div class="adv-icon">🛠️</div>
+            <h4 data-fr="Outils & Support" data-ar="الأدوات والدعم">Outils & Support</h4>
+            <p data-fr="Supports de communication et accompagnement fournis." data-ar="دعائم تواصل ومرافقة مقدمة.">Supports de communication et accompagnement fournis.</p>
+          </div>
+          <div class="adv-card" data-tilt>
+            <div class="adv-icon">🌟</div>
+            <h4 data-fr="Opportunité unique" data-ar="فرصة فريدة">Opportunité unique</h4>
+            <p data-fr="Participez au développement d'une solution innovante." data-ar="شاركوا في تطوير حلّ مبتكر.">Participez au développement d'une solution innovante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMMISSIONS SECTION ==================== -->
+  <section class="section commissions" id="commissions">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag" data-fr="Rémunération" data-ar="الأجر">Rémunération</span>
+        <h2 class="section-title">
+          <span data-fr="Système de" data-ar="نظام">Système de</span> <span class="gradient-text" data-fr="commissions progressif" data-ar="عمولات تصاعدي">commissions progressif</span>
+        </h2>
+        <p class="section-desc" data-fr="Plus vous vendez, plus votre taux de commission augmente. Calculez vos gains potentiels." data-ar="كلما بعتم أكثر، زاد معدل عمولتكم. احسبوا أرباحكم المحتملة.">Plus vous vendez, plus votre taux de commission augmente. Calculez vos gains potentiels.</p>
+      </div>
+
+      <!-- Commission tiers -->
+      <div class="commission-tiers animate-on-scroll">
+        <div class="tier-card" data-tilt>
+          <div class="tier-level" data-fr="Palier 1" data-ar="المستوى 1">Palier 1</div>
+          <div class="tier-rate" dir="ltr">20<span>%</span></div>
+          <div class="tier-range" data-fr="1ʳᵉ à 3ᵉ vente" data-ar="من 1 إلى 3 مبيعات">1ʳᵉ à 3ᵉ vente</div>
+          <div class="tier-gain" data-fr="7 000 DA / restaurant" data-ar="7 000 دج لكل مطعم">7 000 DA / restaurant</div>
+          <div class="tier-bar" style="--bar-width: 60%"></div>
+        </div>
+        <div class="tier-card active" data-tilt>
+          <div class="tier-level" data-fr="Palier 2" data-ar="المستوى 2">Palier 2</div>
+          <div class="tier-rate" dir="ltr">22<span>%</span></div>
+          <div class="tier-range" data-fr="4ᵉ à 7ᵉ vente" data-ar="من 4 إلى 7 مبيعات">4ᵉ à 7ᵉ vente</div>
+          <div class="tier-gain" data-fr="7 700 DA / restaurant" data-ar="7 700 دج لكل مطعم">7 700 DA / restaurant</div>
+          <div class="tier-bar" style="--bar-width: 75%"></div>
+        </div>
+        <div class="tier-card premium" data-tilt>
+          <div class="tier-level" data-fr="Palier 3" data-ar="المستوى 3">Palier 3</div>
+          <div class="tier-rate" dir="ltr">25<span>%</span></div>
+          <div class="tier-range" data-fr="À partir de la 8ᵉ" data-ar="ابتداءً من 8 مبيعات">À partir de la 8ᵉ</div>
+          <div class="tier-gain" data-fr="8 750 DA / restaurant" data-ar="8 750 دج لكل مطعم">8 750 DA / restaurant</div>
+          <div class="tier-bar" style="--bar-width: 100%"></div>
+        </div>
+      </div>
+
+      <!-- Interactive commission calculator -->
+      <div class="commission-calculator animate-on-scroll">
+        <div class="calc-header">
+          <h3>🧮 <span data-fr="Simulateur de Commissions" data-ar="محاكي العمولات">Simulateur de Commissions</span></h3>
+          <p data-fr="Déplacez le curseur pour simuler vos revenus trimestriels" data-ar="حرّك المؤشر لمحاكاة أرباحك الفصلية">Déplacez le curseur pour simuler vos revenus trimestriels</p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-input-area">
+            <label data-fr="Nombre de restaurants ce trimestre" data-ar="عدد المطاعم هذا الثلاثي">Nombre de restaurants ce trimestre</label>
+            <div class="calc-slider-wrap">
+              <input type="range" min="1" max="15" value="5" class="calc-slider commission-slider" id="commissionSlider">
+              <div class="calc-current-value" id="commissionValue">5</div>
+            </div>
+          </div>
+          <div class="commission-breakdown" id="commissionBreakdown"></div>
+          <div class="commission-total">
+            <div class="commission-total-label" data-fr="Vos revenus trimestriels" data-ar="أرباحكم الفصلية">Vos revenus trimestriels</div>
+            <div class="commission-total-amount" id="commissionTotal">36 400 DA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commission examples table -->
+      <div class="commission-examples animate-on-scroll">
+        <h3 data-fr="Exemples de rémunération trimestrielle" data-ar="أمثلة على الأجر الفصلي">Exemples de rémunération trimestrielle</h3>
+        <div class="table-wrapper">
+          <table class="examples-table">
+            <thead>
+              <tr>
+                <th data-fr="Restaurants payants" data-ar="المطاعم المشتركة">Restaurants payants</th>
+                <th data-fr="Détail du calcul" data-ar="تفصيل الحساب">Détail du calcul</th>
+                <th data-fr="Total des commissions" data-ar="مجموع العمولات">Total des commissions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="table-badge">1</span></td>
+                <td><span class="calc-formula" dir="ltr" data-fr="1 × 7 000 DA" data-ar="1 × 7 000 دج">1 × 7 000 DA</span></td>
+                <td class="table-total"><span dir="ltr" data-fr="7 000 DA" data-ar="7 000 دج">7 000 DA</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">3</span></td>
+                <td><span class="calc-formula" dir="ltr" data-fr="3 × 7 000 DA" data-ar="3 × 7 000 دج">3 × 7 000 DA</span></td>
+                <td class="table-total"><span dir="ltr" data-fr="21 000 DA" data-ar="21 000 دج">21 000 DA</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-badge">5</span></td>
+                <td><span class="calc-formula" dir="ltr" data-fr="(3 × 7 000) + (2 × 7 700)" data-ar="(3 × 7 000) + (2 × 7 700)">(3 × 7 000) + (2 × 7 700)</span></td>
+                <td class="table-total"><span dir="ltr" data-fr="36 400 DA" data-ar="36 400 دج">36 400 DA</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-badge highlight">8</span></td>
+                <td><span class="calc-formula" dir="ltr" data-fr="(3 × 7 000) + (4 × 7 700) + (1 × 8 750)" data-ar="(3 × 7 000) + (4 × 7 700) + (1 × 8 750)">(3 × 7 000) + (4 × 7 700) + (1 × 8 750)</span></td>
+                <td class="table-total highlight"><span dir="ltr" data-fr="60 550 DA" data-ar="60 550 دج">60 550 DA</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-badge highlight">10</span></td>
+                <td><span class="calc-formula" dir="ltr" data-fr="(3 × 7 000) + (4 × 7 700) + (3 × 8 750)" data-ar="(3 × 7 000) + (4 × 7 700) + (3 × 8 750)">(3 × 7 000) + (4 × 7 700) + (3 × 8 750)</span></td>
+                <td class="table-total highlight"><span dir="ltr" data-fr="78 050 DA" data-ar="78 050 دج">78 050 DA</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Conditions -->
+      <div class="conditions-box animate-on-scroll">
+        <h3>📌 <span data-fr="Conditions de versement" data-ar="شروط الدفع">Conditions de versement</span></h3>
+        <div class="conditions-grid">
+          <div class="condition-item">
+            <span class="condition-icon">✅</span>
+            <p data-fr="Commission due uniquement après paiement effectif de l'abonnement" data-ar="العمولة مستحقة فقط بعد دفع الاشتراك فعلياً">Commission due uniquement après paiement effectif de l'abonnement</p>
+          </div>
+          <div class="condition-item">
+            <span class="condition-icon">❌</span>
+            <p data-fr="Pas de commission sur les inscriptions ou périodes d'essai gratuites" data-ar="لا عمولة على التسجيلات أو فترات التجربة المجانية">Pas de commission sur les inscriptions ou périodes d'essai gratuites</p>
+          </div>
+          <div class="condition-item">
+            <span class="condition-icon">1️⃣</span>
+            <p data-fr="Commission versée une seule fois pour la première année" data-ar="العمولة تُدفع مرة واحدة للسنة الأولى">Commission versée une seule fois pour la première année</p>
+          </div>
+          <div class="condition-item">
+            <span class="condition-icon">📊</span>
+            <p data-fr="Chaque restaurant apporté est identifié et attribué au commercial" data-ar="كل مطعم يتم جلبه يُنسب إلى الممثل التجاري">Chaque restaurant apporté est identifié et attribué au commercial</p>
+          </div>
+          <div class="condition-item">
+            <span class="condition-icon">🏢</span>
+            <p data-fr="Multi-établissements : commission sur le montant total payé" data-ar="متعدد الفروع: العمولة على المبلغ الإجمالي المدفوع">Multi-établissements : commission sur le montant total payé</p>
+          </div>
+          <div class="condition-item">
+            <span class="condition-icon">🔄</span>
+            <p data-fr="Les renouvellements ne donnent pas automatiquement de nouvelle commission" data-ar="التجديد لا يمنح تلقائياً عمولة جديدة">Les renouvellements ne donnent pas automatiquement de nouvelle commission</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / CONTACT SECTION ==================== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="cta-card animate-on-scroll">
+        <div class="cta-bg-elements">
+          <div class="cta-circle c1"></div>
+          <div class="cta-circle c2"></div>
+          <div class="cta-circle c3"></div>
+        </div>
+        <div class="cta-content">
+          <img src="myam_logo.png" alt="MYAM Logo" class="cta-logo">
+          <h2>
+            <span data-fr="Prêt à rejoindre" data-ar="مستعد للانضمام إلى">Prêt à rejoindre</span> <span class="gradient-text">MYAM</span> ?
+          </h2>
+          <p data-fr="Que vous soyez restaurateur ou commercial indépendant, MYAM vous offre les outils pour réussir." data-ar="سواء كنتم أصحاب مطاعم أو ممثلين تجاريين مستقلين، MYAM يوفر لكم أدوات النجاح.">Que vous soyez restaurateur ou commercial indépendant, MYAM vous offre les outils pour réussir.</p>
+
+          <!-- Contact Methods -->
+          <div class="contact-methods">
+            <a href="mailto:support@myam-dz.com" class="contact-method email-method">
+              <div class="contact-method-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div class="contact-method-info">
+                <span class="contact-method-label" data-fr="Écrivez-nous par email" data-ar="راسلونا عبر البريد الإلكتروني">Écrivez-nous par email</span>
+                <span class="contact-method-value">support@myam-dz.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/YAHIAOUI_NESSRINE" target="_blank" class="contact-method whatsapp-method">
+              <div class="contact-method-icon whatsapp-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="contact-method-info">
+                <span class="contact-method-label" data-fr="Contactez-nous sur WhatsApp" data-ar="تواصلوا معنا عبر واتساب">Contactez-nous sur WhatsApp</span>
+                <span class="contact-method-value">WhatsApp : YAHIAOUI_NESSRINE</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="myam_logo.png" alt="MYAM Logo" class="footer-logo-img">
+          <span class="logo-text">MY<span class="logo-accent">AM</span></span>
+          <p data-fr="Solution numérique pour la restauration. Développez votre présence. Simplifiez votre gestion." data-ar="حلّ رقمي للمطاعم. طوّروا حضوركم. بسّطوا إدارتكم.">Solution numérique pour la restauration.<br>Développez votre présence. Simplifiez votre gestion.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4 data-fr="Solution" data-ar="الحلول">Solution</h4>
+            <a href="#features" data-fr="Fonctionnalités" data-ar="المزايا">Fonctionnalités</a>
+            <a href="#pricing" data-fr="Tarification" data-ar="الأسعار">Tarification</a>
+            <a href="#">MYAM Manager</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-fr="Partenariat" data-ar="الشراكة">Partenariat</h4>
+            <a href="#partnership" data-fr="Devenir partenaire" data-ar="كن شريكاً">Devenir partenaire</a>
+            <a href="#commissions" data-fr="Commissions" data-ar="العمولات">Commissions</a>
+            <a href="#" data-fr="Conditions" data-ar="الشروط">Conditions</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-fr="Contact" data-ar="اتصل بنا">Contact</h4>
+            <a href="mailto:support@myam-dz.com">
+              <span class="footer-contact-icon">✉️</span> support@myam-dz.com
+            </a>
+            <a href="https://wa.me/YAHIAOUI_NESSRINE" target="_blank">
+              <span class="footer-contact-icon">💬</span> WhatsApp (YAHIAOUI_NESSRINE)
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 MYAM. <span data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">Tous droits réservés.</span></p>
+        <p data-fr="Développez votre présence numérique. Simplifiez votre gestion." data-ar="طوّروا حضوركم الرقمي. بسّطوا إدارتكم.">Développez votre présence numérique. Simplifiez votre gestion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
